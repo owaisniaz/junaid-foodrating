@@ -1,0 +1,135 @@
+*{
+    padding: 0;
+    margin: 0;
+    border: 1px solid black;
+}
+a{
+  text-decoration : none ;
+}
+
+:root{
+  --white:#fff;
+  --roundBoxPy:12px;
+  --roundBoxPx:24px;
+  --border-radius:15px;
+}
+
+/* ========================================
+        Navbar Styling start
+  ========================================= */
+
+nav{
+    border-radius:25px;
+    padding:20px ;
+}
+section article{
+  height: 600px;
+}
+/* ========================================
+        Navbar Styling end
+  ========================================= */
+
+
+  /* ========================================
+        Content Styling start
+  ========================================= */
+  
+/* === Here I am styling element in article 1 === */
+
+.round-box-title{
+  width: 250px;
+  border-radius: 15px;
+  padding: var(--roundBoxPy) var(--roundBoxPx);
+}
+/* === end === */
+
+/* === Here I am styling element in article 2 for search === */
+
+article.second-search-article input.form-control{
+  padding:var(--roundBoxPy) var(--roundBoxPx); 
+  border-radius: var(--border-radius);
+  position: relative;
+}
+
+input.form-control ~ a{
+  position: absolute;
+  top: 5%;
+  right: 5%;
+  font-size: 25px;
+  z-index: 111;
+}
+/*---- end ---*/
+
+.number-wrapper{
+  position:relative ;
+  width: 250px;
+  padding: var(--roundBoxPy) var(--roundBoxPx);
+  border-radius: var(--border-radius);
+  border: 1px solid rebeccapurple;
+  transition: 0.5s;
+}
+/* === Here I am styling element in article 3 for search box
+ remember here styling are same for both 1 and 2 article ===
+  */
+.select-box {
+  position: relative;
+  display: flex;
+  width: 250px;
+  flex-direction: column;
+}
+.select-box .options-container {
+  background:var(--white);
+  max-height: 0;
+  width: 100%;
+  opacity: 0;
+  transition: all 0.4s;
+  border-radius: 8px;
+  overflow: hidden;
+  order: 1;
+  position: absolute;
+  z-index: 100;
+}
+.selected {
+  background:var(--white);
+  border-radius: var(--border-radius);
+  margin-bottom: 8px;
+  position: relative;
+  order: 0;
+}
+.selected::after {
+  content: "";
+  background: url("../img/001-down-arrow.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  height: 100%;
+  width: 20px;
+  right: 10px;
+  top: 15px;
+  transition: all 0.4s;
+}
+.select-box .options-container.active {
+  max-height: 240px;
+  opacity: 1;
+  margin-top: 60px;
+}
+.select-box .options-container.active + .selected::after {
+  transform: rotateX(180deg);
+  top: -16px;
+}
+.select-box .option,
+.selected {
+  padding: var(--roundBoxPy) var(--roundBoxPx);
+  cursor: pointer;
+}
+.select-box label {
+  cursor: pointer;
+}
+.select-box .option .radio {
+  display: none;
+}
+/* === end === */
+
+/* ========================================
+        Content Section Styling end
+  ========================================= */
