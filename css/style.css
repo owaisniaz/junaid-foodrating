@@ -22,7 +22,7 @@ nav{
     border-radius:25px;
     padding:20px ;
 }
-section article{
+section section{
   height: 600px;
 }
 /* ========================================
@@ -34,7 +34,7 @@ section article{
         Content Styling start
   ========================================= */
   
-/* === Here I am styling element in article 1 === */
+/* === Here I am styling element in section 1 === */
 
 .round-box-title{
   width: 250px;
@@ -43,9 +43,9 @@ section article{
 }
 /* === end === */
 
-/* === Here I am styling element in article 2 for search === */
+/* === Here I am styling element in section 2 for search === */
 
-article.second-search-article input.form-control{
+section.second-search-section input.form-control{
   padding:var(--roundBoxPy) var(--roundBoxPx); 
   border-radius: var(--border-radius);
   position: relative;
@@ -68,8 +68,8 @@ input.form-control ~ a{
   border: 1px solid rebeccapurple;
   transition: 0.5s;
 }
-/* === Here I am styling element in article 3 for search box
- remember here styling are same for both 1 and 2 article ===
+/* === Here I am styling element in section 3 for search box
+ remember here styling are same for both 1 and 2 section ===
   */
 .select-box {
   position: relative;
