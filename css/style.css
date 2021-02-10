@@ -1,7 +1,8 @@
 *{
     padding: 0;
     margin: 0;
-    border: 1px solid black;
+    /* border: 1px solid black; */
+    
 }
 a{
   text-decoration : none ;
@@ -9,9 +10,17 @@ a{
 
 :root{
   --white:#fff;
-  --roundBoxPy:12px;
+  --roundBoxPy:15px;
+  --thirteenpy:13px;
   --roundBoxPx:24px;
   --border-radius:15px;
+  --primary-color:skyblue;
+  --round-box-width:95%;
+  --body-color:#F5F5F5;
+}
+
+body{
+  background-color: #F5F5F5;
 }
 
 /* ========================================
@@ -21,10 +30,9 @@ a{
 nav{
     border-radius:25px;
     padding:20px ;
+    background-color: var(--white);
 }
-section section{
-  height: 600px;
-}
+
 /* ========================================
         Navbar Styling end
   ========================================= */
@@ -37,36 +45,118 @@ section section{
 /* === Here I am styling element in section 1 === */
 
 .round-box-title{
-  width: 250px;
+  width: var(--round-box-width);
   border-radius: 15px;
   padding: var(--roundBoxPy) var(--roundBoxPx);
+  position: relative;
+  left: 2%;
+  right: 2%;
+  background-color: var(--white);
+
 }
+#map {
+  height: 300px;
+  width: 100%;
+  border-radius: var(--border-radius);
+}
+.map-container{
+  position:relative;
+  border-radius: var(--border-radius);
+}
+.containerOfSearch{
+  position: absolute;
+  width: var(--round-box-width);
+  top:5%;
+  left: 2%;
+  right: 2%;
+}
+.containerOfSearch input{
+  margin: 0;
+  padding:var(--thirteenpy) var(--roundBoxPx); 
+  border-radius: var(--border-radius) !important;
+  position: relative;
+}
+/* (*) symbol show  the code have written */
+/* this code have written in below in parentOfSearch (*) */
+
 /* === end === */
 
 /* === Here I am styling element in section 2 for search === */
-
-section.second-search-section input.form-control{
+.parentOfSearch{
+  border-radius: var(--border-radius) !important;
+  background-color: #E4E4E4 !important;
+}
+section.second-search-section input{
   padding:var(--roundBoxPy) var(--roundBoxPx); 
-  border-radius: var(--border-radius);
+  border-radius: var(--border-radius) !important;
   position: relative;
+  background-color: #E4E4E4;
 }
 
+/* this code is same as for containerOfSearch in above (*) */
 input.form-control ~ a{
   position: absolute;
-  top: 5%;
+  top: 15%;
   right: 5%;
   font-size: 25px;
   z-index: 111;
 }
+
 /*---- end ---*/
 
 .number-wrapper{
   position:relative ;
-  width: 250px;
-  padding: var(--roundBoxPy) var(--roundBoxPx);
+  width: var(--round-box-width);
   border-radius: var(--border-radius);
   border: 1px solid rebeccapurple;
   transition: 0.5s;
+  position: relative;
+  display: flex;
+  left: 2%;
+  right: 2%;
+  background-color: var(--white);
+}
+.number-wrapper span.content{
+  border-radius: var(--border-radius);
+  padding:12px 50px 12px 24px ;
+}
+.number-wrapper i{
+  color: var(--primary-color) !important;
+  padding: 0px !important;
+}
+
+.number-wrapper i::before{
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+}
+#box span{
+  position:relative;
+  display: block;
+  width: 100%;
+  text-align: center;
+  line-height: 50px;
+  color: brown;
+  display: none;
+  font-size: 24px;
+  font-weight: 700;
+  user-select: none;
+  box-sizing: border-box;
+}
+#box span:nth-child(1){
+  display: initial;
+}
+.number-wrapper i.next{
+  position: absolute;
+  top: 0%;
+  right: 5%;
+  margin: 0;
+}
+.number-wrapper i.prev{
+  position: absolute;
+  bottom: 0%;
+  right: 5%;
+  margin: 0;
 }
 /* === Here I am styling element in section 3 for search box
  remember here styling are same for both 1 and 2 section ===
@@ -74,8 +164,10 @@ input.form-control ~ a{
 .select-box {
   position: relative;
   display: flex;
-  width: 250px;
+  width: var(--round-box-width);
   flex-direction: column;
+  left: 2%;
+  right: 2%;
 }
 .select-box .options-container {
   background:var(--white);
@@ -133,3 +225,7 @@ input.form-control ~ a{
 /* ========================================
         Content Section Styling end
   ========================================= */
+.classical{
+  height: 300px;
+  background-color: brown;
+}

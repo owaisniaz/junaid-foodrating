@@ -18,7 +18,7 @@
 <body>
     <main>
         <!-- =========================== Navigation bar start =========================== -->
-        <nav class="mx-4 d-flex justify-content-between">
+        <nav class="mx-2 d-flex justify-content-between mt-4">
             <div id="logo">
                 <a href="#" class="navbar-brannd">
                     FOODRATING
@@ -37,14 +37,14 @@
 
         <section id="content">
             <div class="container">
-                <div class="row">
+                <div class="row no-gutters">
                     <div class="col-md-3 mt-3">
                         <section class="firs-search-section">
                             <div class="round-box-title">
                                 Restaurants
                             </div>
 
-                            <div class="select-box mt-4">
+                            <div class="select-box mt-3">
                                 <div class="options-container">
                                     <div class="option">
                                         <input type="radio" class="radio" id="automobiles" name="category" />
@@ -55,7 +55,7 @@
                                         <input type="radio" class="radio" id="film" name="category" />
                                         <label for="film">Film & Animation</label>
                                     </div>
-                                    <div class="option">
+                                    <div class="option"> 
                                         <input type="radio" class="radio" id="tutorials" name="category" />
                                         <label for="tutorials">Tutorials</label>
                                     </div>
@@ -66,63 +66,108 @@
                             </div>
 
 
-                            <div class="number-wrapper">
-                                <i class="flaticon-up-arrow-angle"></i>
-                                <i class="flaticon-down-arrow"></i>
-                                <div id="box">
-                                    <span>0</span>
+                            <div class="number-wrapper d-flex mr-3 align-items-center mt-2">
+                                <span class="content">Distance in km</span>
+                                <div id="box" class="pl-3 py-0">
+
                                 </div>
+                                <i class="flaticon-up-arrow-angle next" onclick="nextNum()"></i>
+                                <i class="flaticon-down-arrow prev" onclick="prevNum()"></i>
+
+                            </div>
+                       
+                            <div class="map-container mt-4">
+                            <div id="map"></div>
+                            <div class="input-group containerOfSearch">
+                                <input class="form-control round-border" type="text" placeholder="Search Location">
+                                <a href="#"> <i class="fas fa-search"></i> </a>
+                            </div>
+                            
                             </div>
 
                         </section>
                     </div>
-                    <div class="col-md-6 mt-3">
-                        <section class="second-search-section">
-                            <div class="input-group">
-                            <input class="form-control round-border" type="text" placeholder="Search Food">.
-                            <a href="#"> <i class="fas fa-search"></i> </a>
+                    <div class="col-md-9 mt-3">
+                        <div class="row no-gutters">  <!-- starting the inner row of column 9 -->
+                            <!-- =============================  Starting is the section of search bar  ============================= -->
+                            <div class="col-md-8">
+                            <section class="second-search-section">
+                                <div class="input-group parentOfSearch">
+                                    <input class="form-control round-border" type="text" placeholder="Search Food">
+                                    <a href="#"> <i class="fas fa-search"></i> </a>
+                                </div>
+                            </section>
                         </div>
-                        </section>
-                    </div>
-                    <div class="col-md-3 mt-3">
-                        <section class="firs-search-section">
-                            <div class="select-box">
-                                <div class="options-container">
-                                    <div class="option">
-                                        <input type="radio" class="radio" id="automobiles" name="category" />
-                                        <label for="automobiles">Automobiles</label>
-                                    </div>
-                                    <div class="option">
-                                        <input type="radio" class="radio" id="film" name="category" />
-                                        <label for="film">Film & Animation</label>
-                                    </div>
-                                    <div class="option">
-                                        <input type="radio" class="radio" id="music" name="category" />
-                                        <label for="music">Music</label>
-                                    </div>
-                                    <div class="option">
-                                        <input type="radio" class="radio" id="tutorials" name="category" />
-                                        <label for="tutorials">Tutorials</label>
-                                    </div>
-                                </div>
-                                <div class="selected">
-                                    Select Video Category
-                                </div>
-                            </div>
+                            
+                            <!-- =============================  End the section of search bar  =============================== -->
 
-                        </section>
-                    </div>
-                </div>
-            </div>
-        </section>
-        
-        <!-- ===================== Here content styling end======================= -->
+                        <!-- =================================  Starting is the section of sort by  ==================================== -->
+                        <div class="col-md-4">
+                            <section class="firs-search-section">
+                                <div class="select-box">
+                                    <div class="options-container">
+                                        <div class="option">
+                                            <input type="radio" class="radio" id="automobiles" name="category" />
+                                            <label for="automobiles">Automobiles</label>
+                                        </div>
+                                        <div class="option">
+                                            <input type="radio" class="radio" id="film" name="category" />
+                                            <label for="film">Film & Animation</label>
+                                        </div>
+                                        <div class="option">
+                                            <input type="radio" class="radio" id="music" name="category" />
+                                            <label for="music">Music</label>
+                                        </div>
+                                        <div class="option">
+                                            <input type="radio" class="radio" id="tutorials" name="category" />
+                                            <label for="tutorials">Tutorials</label>
+                                        </div>
+                                    </div>
+                                    <div class="selected">
+                                        Select Video Category
+                                    </div>
+                                </div>
+                            </section>
+                        </div>
+                            <!-- =================================  The end of section sort by  ======================================= -->
+                        </div><!-- inner row-->
+                        <div class="row classical"></div>
+                    </div><!-- last column col-9 -->
+                </div><!-- parent row -->
+            </div><!-- container -->
+
+
+            <!-- ===================== Here content styling end======================= -->
     </main>
 
     <!-- ============== jQuery link ============== -->
     <script src="js/jquery-3.5.1.min.js"></script>
     <!-- ============= bootstrap JavaSript ============ -->
     <script src="js/jquery-3.5.1.min.js"></script>
+    <script>
+
+function initMap() {
+  var location = {lat: -25.363, lng: 131.044};
+  var map = new google.maps.Map(document.getElementById("map"), {
+    zoom:4,
+    center :location,
+    disableDefaultUI: true,
+    zoomControl: false,
+    scaleControl: true,
+  });
+  var marker = new google.maps.Marker({
+    position:location,
+    map:map,
+    
+  });
+  
+}
+
+
+
+    </script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCrhNhEW-NO_eX6QPFPeEaig04EujRzTDM&callback=initMap"
+    type="text/javascript"></script>
     <script src="js/main.js"></script>
 </body>
 
