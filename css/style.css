@@ -225,7 +225,40 @@ input.form-control ~ a{
 /* ========================================
         Content Section Styling end
   ========================================= */
-.classical{
-  height: 300px;
+  #cardsSection{
+    height: 70vh !important;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+.rankingImage{
+  width: 40px;
+  height: 40px;
   background-color: brown;
+  border-radius: 14px;
+}
+.card{
+  border-radius: 25px;
+}
+.card-img-top{
+  border-radius: 25px;
+  height: 200px !important;
+}
+#primary-button{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  border-radius: 15px;
+}
+.bluestar{
+  color: #58AFEB;
+}
+.greystar{
+  color: #BEBEBE;
+}
+p.card-text,.card-title{
+  font-weight: bold;
+  color: #58AFEB;
+}
+.cardBottomInfo{
+  color: #9c9a9a;
 }
