@@ -14,7 +14,7 @@ a{
   --thirteenpy:13px;
   --roundBoxPx:24px;
   --border-radius:15px;
-  --primary-color:skyblue;
+  --primary-color: #58AFEB;
   --round-box-width:95%;
   --body-color:#F5F5F5;
 }
@@ -52,7 +52,11 @@ nav{
   left: 2%;
   right: 2%;
   background-color: var(--white);
+  transition: all .5s;
 
+}
+.round-box-title:hover{
+  box-shadow: 0 5px 5px rgba(0,0,0,0.25), 0 5px 5px rgba(0,0,0,0.22);
 }
 #map {
   height: 300px;
@@ -69,6 +73,9 @@ nav{
   top:5%;
   left: 2%;
   right: 2%;
+}
+.map-container:hover{
+  box-shadow: 0 5px 5px rgba(0,0,0,0.25), 0 5px 5px rgba(0,0,0,0.22);
 }
 .containerOfSearch input{
   margin: 0;
@@ -91,7 +98,9 @@ section.second-search-section input{
   border-radius: var(--border-radius) !important;
   position: relative;
   background-color: #E4E4E4;
+  border: none;
 }
+
 
 /* this code is same as for containerOfSearch in above (*) */
 input.form-control ~ a{
@@ -100,6 +109,8 @@ input.form-control ~ a{
   right: 5%;
   font-size: 25px;
   z-index: 111;
+  color: var(--primary-color);
+  
 }
 
 /*---- end ---*/
@@ -108,14 +119,18 @@ input.form-control ~ a{
   position:relative ;
   width: var(--round-box-width);
   border-radius: var(--border-radius);
-  border: 1px solid rebeccapurple;
   transition: 0.5s;
-  position: relative;
   display: flex;
   left: 2%;
   right: 2%;
   background-color: var(--white);
+  transition: 0.3s;
 }
+.number-wrapper:hover{
+  box-shadow: 0 5px 5px rgba(0,0,0,0.25), 0 5px 5px rgba(0,0,0,0.22);
+  cursor: pointer;
+}
+
 .number-wrapper span.content{
   border-radius: var(--border-radius);
   padding:12px 50px 12px 24px ;
@@ -136,7 +151,6 @@ input.form-control ~ a{
   width: 100%;
   text-align: center;
   line-height: 50px;
-  color: brown;
   display: none;
   font-size: 24px;
   font-weight: 700;
@@ -168,6 +182,10 @@ input.form-control ~ a{
   flex-direction: column;
   left: 2%;
   right: 2%;
+}
+.options-container{
+  border-radius: 25px !important;
+    box-shadow: 1px 5px 5px rgba(0,0,0,0.25), 0 5px 5px rgba(0,0,0,0.22);
 }
 .select-box .options-container {
   background:var(--white);
@@ -225,10 +243,13 @@ input.form-control ~ a{
 /* ========================================
         Content Section Styling end
   ========================================= */
-  #cardsSection{
+  .overflow-section{
     height: 70vh !important;
     overflow-y: scroll;
     overflow-x: hidden;
+  }
+  .overflow-section::-webkit-scrollbar {
+    display: none;
   }
 .rankingImage{
   width: 40px;
@@ -238,26 +259,37 @@ input.form-control ~ a{
 }
 .card{
   border-radius: 25px;
+  width: 14.6rem;
+  margin: auto;
+  transition: all.3s ease-in-out;
+}
+.card:hover{
+box-shadow: 0 5px 5px rgba(0,0,0,0.25), 0 5px 5px rgba(0,0,0,0.22);
+cursor: pointer;
 }
 .card-img-top{
-  border-radius: 25px;
-  height: 200px !important;
+  border-radius: 20px;
+  height: 220px !important;
+  width:96%;
+  margin:4px auto;
 }
 #primary-button{
   width: 100%;
   display: flex;
   justify-content: center;
   border-radius: 15px;
+  background-color:var(--primary-color);
+  border: none;
 }
 .bluestar{
-  color: #58AFEB;
+  color: var(--primary-color);
 }
 .greystar{
   color: #BEBEBE;
 }
 p.card-text,.card-title{
   font-weight: bold;
-  color: #58AFEB;
+  color: var(--primary-color);
 }
 .cardBottomInfo{
   color: #9c9a9a;
