@@ -46,25 +46,22 @@ selectedAll.forEach((selected) => {
   };
 });
 
-var numbers  = document.getElementById('box');
-for(var a = 0; a<6 ;a++){
-  var span = document.createElement('span');
+var numbers = document.getElementById("box");
+for (var a = 0; a < 6; a++) {
+  var span = document.createElement("span");
   span.textContent = a;
   numbers.appendChild(span);
 }
-var num = numbers.getElementsByTagName('span');
+var num = numbers.getElementsByTagName("span");
 var index = 0;
-function nextNum(){
-  num[index].style.display = 'none';
-  index = (index+1)% num.length;
-  num[index].style.display = 'initial';
+function nextNum() {
+  num[index].style.display = "none";
+  index = (index + 1) % num.length;
+  num[index].style.display = "initial";
 }
-function prevNum(){
-  num[index].style.display = 'none';
-  index = (index-1 + num.length)% num.length;
-  num[index].style.display = 'initial';
+function prevNum() {
+  num[index].style.display = "none";
+  index = (index - 1 + num.length) % num.length;
+  num[index].style.display = "initial";
 }
-
-
-
 

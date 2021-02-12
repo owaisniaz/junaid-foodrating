@@ -1,50 +1,53 @@
-*{
-    padding: 0;
-    margin: 0;
-    /* border: 1px solid black; */
-    
+* {
+  padding: 0;
+  margin: 0;
+  /* border: 1px solid rebeccapurple; */
+
 }
-a{
-  text-decoration : none ;
+a {
+  text-decoration: none;
 }
 
-:root{
-  --white:#fff;
-  --roundBoxPy:15px;
-  --thirteenpy:13px;
-  --roundBoxPx:24px;
-  --border-radius:15px;
-  --primary-color: #58AFEB;
-  --round-box-width:95%;
-  --body-color:#F5F5F5;
+:root {
+  --white: #fff;
+  --roundBoxPy: 15px;
+  --thirteenpy: 13px;
+  --roundBoxPx: 24px;
+  --border-radius: 15px;
+  --primary-color: #58afeb;
+  --round-box-width: 100%;
+  --body-color: #f5f5f5;
 }
 
-body{
-  background-color: #F5F5F5;
+body {
+  background-color: #f5f5f5;
+  position: relative;
 }
 
 /* ========================================
         Navbar Styling start
   ========================================= */
 
-nav{
-    border-radius:25px;
-    padding:20px ;
-    background-color: var(--white);
+nav {
+  border-radius: 25px;
+  padding: 20px;
+  background-color: var(--white);
 }
 
 /* ========================================
         Navbar Styling end
   ========================================= */
 
-
-  /* ========================================
+/* ========================================
         Content Styling start
   ========================================= */
-  
-/* === Here I am styling element in section 1 === */
 
-.round-box-title{
+/* === Here I am styling element in section 1 === */
+.firs-search-section{
+  padding-right: 18px;
+}
+
+.round-box-title {
   width: var(--round-box-width);
   border-radius: 15px;
   padding: var(--roundBoxPy) var(--roundBoxPx);
@@ -52,34 +55,34 @@ nav{
   left: 2%;
   right: 2%;
   background-color: var(--white);
-  transition: all .5s;
-
+  transition: all 0.5s;
 }
-.round-box-title:hover{
-  box-shadow: 0 5px 5px rgba(0,0,0,0.25), 0 5px 5px rgba(0,0,0,0.22);
+.round-box-title:hover {
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.25), 0 1px 1px rgba(0, 0, 0, 0.22);
 }
 #map {
   height: 300px;
   width: 100%;
   border-radius: var(--border-radius);
 }
-.map-container{
-  position:relative;
+.map-container {
+  position: relative;
   border-radius: var(--border-radius);
 }
-.containerOfSearch{
+.containerOfSearch {
   position: absolute;
-  width: var(--round-box-width);
-  top:5%;
+  width: 90%;
+  top: 5%;
   left: 2%;
   right: 2%;
+  margin:auto;
 }
-.map-container:hover{
-  box-shadow: 0 5px 5px rgba(0,0,0,0.25), 0 5px 5px rgba(0,0,0,0.22);
+.map-container:hover {
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.25), 0 5px 5px rgba(0, 0, 0, 0.22);
 }
-.containerOfSearch input{
+.containerOfSearch input {
   margin: 0;
-  padding:var(--thirteenpy) var(--roundBoxPx); 
+  padding: var(--thirteenpy) var(--roundBoxPx);
   border-radius: var(--border-radius) !important;
   position: relative;
 }
@@ -89,35 +92,37 @@ nav{
 /* === end === */
 
 /* === Here I am styling element in section 2 for search === */
-.parentOfSearch{
+.parentOfSearch {
   border-radius: var(--border-radius) !important;
-  background-color: #E4E4E4 !important;
+  background-color: #e4e4e4 !important;
 }
-section.second-search-section input{
-  padding:var(--roundBoxPy) var(--roundBoxPx); 
+section.second-search-section {
+  width: 98%;
+
+}
+section.second-search-section input {
+  padding: var(--roundBoxPy) var(--roundBoxPx);
   border-radius: var(--border-radius) !important;
   position: relative;
-  background-color: #E4E4E4;
+  background-color: #e4e4e4;
   border: none;
 }
 
-
 /* this code is same as for containerOfSearch in above (*) */
-input.form-control ~ a{
+input.form-control ~ a {
   position: absolute;
   top: 15%;
   right: 5%;
   font-size: 25px;
   z-index: 111;
   color: var(--primary-color);
-  
 }
 
 /*---- end ---*/
 
-.number-wrapper{
-  position:relative ;
-  width: var(--round-box-width);
+.number-wrapper {
+  position: relative;
+  width:var(--round-box-width) !important;
   border-radius: var(--border-radius);
   transition: 0.5s;
   display: flex;
@@ -126,27 +131,27 @@ input.form-control ~ a{
   background-color: var(--white);
   transition: 0.3s;
 }
-.number-wrapper:hover{
-  box-shadow: 0 5px 5px rgba(0,0,0,0.25), 0 5px 5px rgba(0,0,0,0.22);
+.number-wrapper:hover {
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.25), 0 5px 5px rgba(0, 0, 0, 0.22);
   cursor: pointer;
 }
 
-.number-wrapper span.content{
+.number-wrapper span.content {
   border-radius: var(--border-radius);
-  padding:12px 50px 12px 24px ;
+  padding: 14px 50px 15px 24px;
 }
-.number-wrapper i{
+.number-wrapper i {
   color: var(--primary-color) !important;
   padding: 0px !important;
 }
 
-.number-wrapper i::before{
+.number-wrapper i::before {
   margin: 0;
   padding: 0;
   cursor: pointer;
 }
-#box span{
-  position:relative;
+#box span {
+  position: relative;
   display: block;
   width: 100%;
   text-align: center;
@@ -157,16 +162,16 @@ input.form-control ~ a{
   user-select: none;
   box-sizing: border-box;
 }
-#box span:nth-child(1){
+#box span:nth-child(1) {
   display: initial;
 }
-.number-wrapper i.next{
+.number-wrapper i.next {
   position: absolute;
   top: 0%;
   right: 5%;
   margin: 0;
 }
-.number-wrapper i.prev{
+.number-wrapper i.prev {
   position: absolute;
   bottom: 0%;
   right: 5%;
@@ -175,6 +180,9 @@ input.form-control ~ a{
 /* === Here I am styling element in section 3 for search box
  remember here styling are same for both 1 and 2 section ===
   */
+  .secondSelectbox{
+    margin-left: -2px !important;
+  }
 .select-box {
   position: relative;
   display: flex;
@@ -182,13 +190,14 @@ input.form-control ~ a{
   flex-direction: column;
   left: 2%;
   right: 2%;
+  margin: auto;
 }
-.options-container{
+.options-container {
   border-radius: 25px !important;
-    box-shadow: 1px 5px 5px rgba(0,0,0,0.25), 0 5px 5px rgba(0,0,0,0.22);
+  box-shadow: 1px 5px 5px rgba(0, 0, 0, 0.25), 0 5px 5px rgba(0, 0, 0, 0.22);
 }
 .select-box .options-container {
-  background:var(--white);
+  background: var(--white);
   max-height: 0;
   width: 100%;
   opacity: 0;
@@ -200,11 +209,12 @@ input.form-control ~ a{
   z-index: 100;
 }
 .selected {
-  background:var(--white);
+  background: var(--white);
   border-radius: var(--border-radius);
   margin-bottom: 8px;
   position: relative;
   order: 0;
+
 }
 .selected::after {
   content: "";
@@ -243,54 +253,108 @@ input.form-control ~ a{
 /* ========================================
         Content Section Styling end
   ========================================= */
-  .overflow-section{
-    height: 70vh !important;
-    overflow-y: scroll;
-    overflow-x: hidden;
-  }
-  .overflow-section::-webkit-scrollbar {
-    display: none;
-  }
-.rankingImage{
+.overflow-section {
+  height: 70vh !important;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  margin: 0;
+}
+.overflow-section::-webkit-scrollbar {
+  display: none;
+}
+.rankingImage {
   width: 40px;
   height: 40px;
   background-color: brown;
   border-radius: 14px;
 }
-.card{
+.cards-flex-container {
+  flex-wrap: wrap !important;
+}
+.card {
   border-radius: 25px;
-  width: 14.6rem;
+  width: 15rem;
   margin: auto;
   transition: all.3s ease-in-out;
 }
-.card:hover{
-box-shadow: 0 5px 5px rgba(0,0,0,0.25), 0 5px 5px rgba(0,0,0,0.22);
-cursor: pointer;
+.card:hover {
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.25), 0 5px 5px rgba(0, 0, 0, 0.22);
+  cursor: pointer;
 }
-.card-img-top{
+.card-img-top {
   border-radius: 20px;
   height: 220px !important;
-  width:96%;
-  margin:4px auto;
+  width: 96%;
+  margin: 4px auto;
 }
-#primary-button{
+.stars{
+  font-size: 10px !important;
+}
+#primary-button {
   width: 100%;
   display: flex;
   justify-content: center;
   border-radius: 15px;
-  background-color:var(--primary-color);
+  background-color: var(--primary-color);
   border: none;
 }
-.bluestar{
+.bluestar {
   color: var(--primary-color);
 }
-.greystar{
-  color: #BEBEBE;
+.greystar {
+  color: #bebebe;
 }
-p.card-text,.card-title{
+p.card-text,
+.card-title {
   font-weight: bold;
   color: var(--primary-color);
 }
-.cardBottomInfo{
+.cardBottomInfo {
   color: #9c9a9a;
+}
+
+/* Modal styling start */
+#modal-button{
+  position: fixed;
+  z-index: 999;
+  top: 35vh;
+  right: 25px;
+  transform: translateY(-50%) rotate(-90deg);
+  transform-origin: right;
+ padding: 10px 50px;
+  display: flex;
+  justify-content:center;
+border-top-right-radius: 20px;
+border-top-left-radius: 20px;
+}
+.modal-content{
+  background-color: var(--body-color) !important;
+}
+.roundStyle input{
+  border-radius: var(--border-radius) !important;
+  padding: 10px var(--roundBoxPx);
+  border: none;
+}
+#modalSelectbox{
+
+  padding: 10px var(--roundBoxPx);
+  width: 100% !important;
+}
+
+/* Modal styling end */
+@media (max-width: 1168px) {
+  #content .container {
+    max-width: 1140px !important;
+    padding: 0px;
+    width: 95%;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .card {
+    border-radius: 25px;
+    width: 14.6rem;
+    margin: auto;
+    transition: all.3s ease-in-out;
+  }
 }
