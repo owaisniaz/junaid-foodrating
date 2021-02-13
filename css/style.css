@@ -334,6 +334,10 @@ p.card-text,
   margin-left: -12px;
   padding: 10px var(--roundBoxPx);
   width: 100% !important;
+  margin-left: -8px;
+}
+#modalSelectbox::after{
+  top: 15px !important;
 }
 #exampleCheck1 {
   /* position: absolute; */
@@ -362,20 +366,26 @@ p.card-text,
 .feedback-textarea{
   resize: none;
   border: none;
+  border-radius: 15px;
 }
 #modal-footer{
   display: flex;
   justify-content: space-between;
+  margin-top: 30px;
 }
 #mortarFooterButton1,#mortarFooterButton2{
   width: 40%;
   border-radius: 10px;
   padding: 10px;
+  border: none;
 }
 #mortarFooterButton1{
   background-color: #fff;
   color: var(--primary-color);
   font-weight: 700;
+}
+#mortarFooterButton2{
+  background-color: var(--primary-color);
 }
 
 /* Modal styling end */
