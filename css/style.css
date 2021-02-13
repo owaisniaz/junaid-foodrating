@@ -336,8 +336,15 @@ p.card-text,
   width: 100% !important;
   margin-left: -8px;
 }
-#modalSelectbox::after{
-  top: 15px !important;
+.modalSelectbox::after{
+  top: 13px !important;
+}
+.modalSelectbox:focus{
+  top:-14px !important;
+}
+
+.select-box .options-container.active{
+  margin-left: -10px !important;
 }
 #exampleCheck1 {
   /* position: absolute; */
