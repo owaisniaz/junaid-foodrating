@@ -21,26 +21,30 @@
 
   <body>
     <!-- Modal -->
-    <div
-      class="modal fade"
-      id="exampleModal"
-      
-    >
+    <div class="modal fade" id="exampleModal">
       <div class="modal-dialog modal-dialog modal-dialog-centered">
         <div class="modal-content">
-          
           <div class="modal-body">
-
             <form>
               <div class="form-group roundStyle">
-                <input type="text" placeholder="Branch Name" class="form-control" id="branchname" aria-describedby="branch-name">
+                <input
+                  type="text"
+                  placeholder="Branch Name"
+                  class="form-control"
+                  id="branchname"
+                  aria-describedby="branch-name"
+                />
               </div>
               <div class="form-group roundStyle">
-                <input type="email" placeholder="Email" class="form-control " id="email" aria-describedby="email">
+                <input
+                  type="email"
+                  placeholder="Email"
+                  class="form-control"
+                  id="email"
+                  aria-describedby="email"
+                />
               </div>
-              <div class="form-group form-check">
-                             </div>
-              <div class="select-box modalSelectbox m-0" id="modalSelectbox">
+              <div class="select-box modalSelectbox m-0">
                 <div class="options-container">
                   <div class="option">
                     <input
@@ -79,29 +83,44 @@
                     <label for="tutorials">Tutorials</label>
                   </div>
                 </div>
-                <div class="selected">Category</div>
+                <div class="selected" id="modalSelectbox">Category</div>
               </div>
 
+              <div class="form-group mt-2 ">
+                <textarea
+                  class="form-control feedback-textarea"
+                  id="textAreaExample"
+                  rows="4"
+                  placeholder="Description"
+                ></textarea>
+              </div>
+              <div class="form-group mt-2">
+                <input
+                  type="checkbox"
+                  class="form-check-input"
+                  id="exampleCheck1"
+                />
 
-              
-
-            </form>
-
-            <input type="checkbox" class="form-check-input" id="exampleCheck1">
-
-              <label class="form-check-label" for="exampleCheck1">Check me out</label>
-
-          </div>
-          <div class="modal-footer">
-            <button
+                <label class="form-check-label ml-4 mt-1" for="exampleCheck1"
+                  >Click to automatically attach screenshot of this page</label
+                >
+              </div>
+              <div id="modal-footer">
+              <button
               type="button"
               class="btn btn-secondary"
               data-dismiss="modal"
+              id="mortarFooterButton1"
+
             >
               Close
             </button>
-            <button type="button" class="btn btn-primary">Save changes</button>
+            <button type="button" class="btn btn-primary" id="mortarFooterButton2">Save changes</button>
           </div>
+
+            </form>
+          </div>
+          
         </div>
       </div>
     </div>
@@ -122,7 +141,7 @@
 
       <section id="content">
         <div class="container p-0">
-          <div class="row ">
+          <div class="row">
             <div class="col-md-3 mt-4">
               <section class="firs-search-section">
                 <div class="round-box-title">Restaurants</div>
@@ -158,12 +177,12 @@
                       <label for="tutorials">Tutorials</label>
                     </div>
                   </div>
-                  <div class="selected">Select Video Category</div>
+                  <div class="selected">Select a cuisine</div>
                 </div>
 
                 <div class="number-wrapper d-flex mr-3 align-items-center mt-3">
                   <span class="content">Distance in km</span>
-                  <div id="box" class="pl-3 py-0"></div>
+                  <div id="box" class="pr-5 py-0"></div>
                   <i
                     class="flaticon-up-arrow-angle next"
                     onclick="nextNum()"
@@ -245,7 +264,7 @@
                           <label for="tutorials">Tutorials</label>
                         </div>
                       </div>
-                      <div class="selected">Select Video Category</div>
+                      <div class="selected">Sort By</div>
                     </div>
                   </section>
                 </div>

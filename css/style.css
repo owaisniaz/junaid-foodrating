@@ -2,7 +2,6 @@
   padding: 0;
   margin: 0;
   /* border: 1px solid rebeccapurple; */
-
 }
 a {
   text-decoration: none;
@@ -43,7 +42,7 @@ nav {
   ========================================= */
 
 /* === Here I am styling element in section 1 === */
-.firs-search-section{
+.firs-search-section {
   padding-right: 18px;
 }
 
@@ -75,7 +74,7 @@ nav {
   top: 5%;
   left: 2%;
   right: 2%;
-  margin:auto;
+  margin: auto;
 }
 .map-container:hover {
   box-shadow: 0 5px 5px rgba(0, 0, 0, 0.25), 0 5px 5px rgba(0, 0, 0, 0.22);
@@ -98,7 +97,6 @@ nav {
 }
 section.second-search-section {
   width: 98%;
-
 }
 section.second-search-section input {
   padding: var(--roundBoxPy) var(--roundBoxPx);
@@ -107,7 +105,6 @@ section.second-search-section input {
   background-color: #e4e4e4;
   border: none;
 }
-
 /* this code is same as for containerOfSearch in above (*) */
 input.form-control ~ a {
   position: absolute;
@@ -117,12 +114,10 @@ input.form-control ~ a {
   z-index: 111;
   color: var(--primary-color);
 }
-
 /*---- end ---*/
-
 .number-wrapper {
   position: relative;
-  width:var(--round-box-width) !important;
+  width: var(--round-box-width) !important;
   border-radius: var(--border-radius);
   transition: 0.5s;
   display: flex;
@@ -135,20 +130,20 @@ input.form-control ~ a {
   box-shadow: 0 5px 5px rgba(0, 0, 0, 0.25), 0 5px 5px rgba(0, 0, 0, 0.22);
   cursor: pointer;
 }
-
 .number-wrapper span.content {
   border-radius: var(--border-radius);
   padding: 14px 50px 15px 24px;
 }
 .number-wrapper i {
   color: var(--primary-color) !important;
-  padding: 0px !important;
+  padding: 0px !important; 
 }
-
 .number-wrapper i::before {
   margin: 0;
   padding: 0;
   cursor: pointer;
+  font-size: 15px;
+  font-weight: 800 !important;
 }
 #box span {
   position: relative;
@@ -157,9 +152,9 @@ input.form-control ~ a {
   text-align: center;
   line-height: 50px;
   display: none;
-  font-size: 24px;
-  font-weight: 700;
+  font-size: 20px;
   user-select: none;
+  color: var(--primary-color);
   box-sizing: border-box;
 }
 #box span:nth-child(1) {
@@ -167,22 +162,22 @@ input.form-control ~ a {
 }
 .number-wrapper i.next {
   position: absolute;
-  top: 0%;
+  top: 10%;
   right: 5%;
   margin: 0;
 }
 .number-wrapper i.prev {
   position: absolute;
-  bottom: 0%;
+  bottom: 10%;
   right: 5%;
   margin: 0;
 }
 /* === Here I am styling element in section 3 for search box
  remember here styling are same for both 1 and 2 section ===
   */
-  .secondSelectbox{
-    margin-left: -2px !important;
-  }
+.secondSelectbox {
+  margin-left: -2px !important;
+}
 .select-box {
   position: relative;
   display: flex;
@@ -214,7 +209,6 @@ input.form-control ~ a {
   margin-bottom: 8px;
   position: relative;
   order: 0;
-
 }
 .selected::after {
   content: "";
@@ -223,9 +217,9 @@ input.form-control ~ a {
   background-repeat: no-repeat;
   position: absolute;
   height: 100%;
-  width: 20px;
-  right: 10px;
-  top: 15px;
+  width: 17px;
+  right: 35px;
+  top: 18px;
   transition: all 0.4s;
 }
 .select-box .options-container.active {
@@ -235,7 +229,7 @@ input.form-control ~ a {
 }
 .select-box .options-container.active + .selected::after {
   transform: rotateX(180deg);
-  top: -16px;
+  top: -17px;
 }
 .select-box .option,
 .selected {
@@ -287,7 +281,7 @@ input.form-control ~ a {
   width: 96%;
   margin: 4px auto;
 }
-.stars{
+.stars {
   font-size: 10px !important;
 }
 #primary-button {
@@ -314,31 +308,74 @@ p.card-text,
 }
 
 /* Modal styling start */
-#modal-button{
+#modal-button {
   position: fixed;
   z-index: 999;
   top: 35vh;
   right: 25px;
   transform: translateY(-50%) rotate(-90deg);
   transform-origin: right;
- padding: 10px 50px;
+  padding: 10px 50px;
   display: flex;
-  justify-content:center;
-border-top-right-radius: 20px;
-border-top-left-radius: 20px;
+  justify-content: center;
+  border: none;
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
 }
-.modal-content{
+.modal-content {
   background-color: var(--body-color) !important;
 }
-.roundStyle input{
+.roundStyle input {
   border-radius: var(--border-radius) !important;
-  padding: 10px var(--roundBoxPx);
+  padding: 10px var(--roundBoxPx) !important;
   border: none;
 }
-#modalSelectbox{
-
+#modalSelectbox {
+  margin-left: -12px;
   padding: 10px var(--roundBoxPx);
   width: 100% !important;
+}
+#exampleCheck1 {
+  /* position: absolute; */
+  margin-top: 0.3rem;
+  margin-left: 0px !important;
+  margin-right: 15px !important;
+
+  -webkit-appearance: none;
+  -ms-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  display: inline-block;
+  width: 20px;
+  margin-bottom: -5px;
+  height: 20px;
+  border: 2px solid #bebebe;
+  background-color: #bebebe;
+  transition: 0.2s all ease-in-out;
+  border-radius: 5px;
+  outline: none;
+}
+#exampleCheck1:checked {
+  border: 2px solid var(--primary-color);
+  background-color: var(--primary-color);
+}
+.feedback-textarea{
+  resize: none;
+  border: none;
+}
+#modal-footer{
+  display: flex;
+  justify-content: space-between;
+}
+#mortarFooterButton1,#mortarFooterButton2{
+  width: 40%;
+  border-radius: 10px;
+  padding: 10px;
+}
+#mortarFooterButton1{
+  background-color: #fff;
+  color: var(--primary-color);
+  font-weight: 700;
 }
 
 /* Modal styling end */
