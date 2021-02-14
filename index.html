@@ -22,8 +22,8 @@
   <body>
     <!-- Modal -->
     <div class="modal fade" id="exampleModal">
-      <div class="modal-dialog modal-dialog modal-dialog-centered">
-        <div class="modal-content">
+      <div class="modal-dialog modal-dialog modal-dialog-centered ">
+        <div class="modal-content p-4" id="mortarBorderRadius">
           <div class="modal-body">
             <form>
               <div class="form-group roundStyle">
@@ -45,7 +45,8 @@
                 />
               </div>
               <div class="select-box modalSelectbox m-0">
-                <div class="options-container">
+              
+                <div class="options-container ml-fix">
                   <div class="option">
                     <input
                       type="radio"
@@ -54,15 +55,6 @@
                       name="category"
                     />
                     <label for="automobiles">Automobiles</label>
-                  </div>
-                  <div class="option">
-                    <input
-                      type="radio"
-                      class="radio"
-                      id="film"
-                      name="category"
-                    />
-                    <label for="film">Film & Animation</label>
                   </div>
                   <div class="option">
                     <input
@@ -83,7 +75,10 @@
                     <label for="tutorials">Tutorials</label>
                   </div>
                 </div>
-                <div class="selected" id="modalSelectbox">Category</div>
+                
+                
+                <div class="selected mt-fix" id="modalSelectbox">Like</div>
+                <span id="category-title">Category</span>
               </div>
 
               <div class="form-group mt-2 ">
@@ -101,7 +96,7 @@
                   id="exampleCheck1"
                 />
 
-                <label class="form-check-label ml-4 mt-1" for="exampleCheck1"
+                <label class="form-check-label ml-4 mt-1 pl-2" for="exampleCheck1"
                   >Click to automatically attach screenshot of this page</label
                 >
               </div>
@@ -113,7 +108,7 @@
               id="mortarFooterButton1"
 
             >
-              Close
+              CANCEL
             </button>
             <button type="button" class="btn btn-primary" id="mortarFooterButton2">POST REVIEW</button>
           </div>
@@ -264,7 +259,7 @@
                           <label for="tutorials">Tutorials</label>
                         </div>
                       </div>
-                      <div class="selected">Sort By</div>
+                      <div class="selected ">Sort By</div>
                     </div>
                   </section>
                 </div>

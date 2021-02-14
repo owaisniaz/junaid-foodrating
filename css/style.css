@@ -16,11 +16,30 @@ a {
   --primary-color: #58afeb;
   --round-box-width: 100%;
   --body-color: #f5f5f5;
+  --shadow: 0 3px 5px rgba(0, 0, 0, 0.25);
+  --primary-gradient: linear-gradient(
+    180deg,
+    rgb(65, 167, 237) 0%,
+    rgb(38, 128, 235) 100%
+  );
+}
+@font-face {
+  font-family: algerian;
+  src: url(../webfonts/Algerian\ Regular.ttf);
 }
 
 body {
   background-color: #f5f5f5;
   position: relative;
+  overflow-x: hidden !important;
+  margin: auto;
+  width: 100vw;
+}
+main{
+  overflow-x: hidden !important;
+  margin: auto;
+  width: 100%;
+
 }
 
 /* ========================================
@@ -31,6 +50,11 @@ nav {
   border-radius: 25px;
   padding: 20px;
   background-color: var(--white);
+}
+#logo {
+  font-family: algerian;
+  
+  font-size: 1.2rem !important;
 }
 
 /* ========================================
@@ -57,7 +81,7 @@ nav {
   transition: all 0.5s;
 }
 .round-box-title:hover {
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.25), 0 1px 1px rgba(0, 0, 0, 0.22);
+  box-shadow: var(--shadow);
 }
 #map {
   height: 300px;
@@ -77,7 +101,7 @@ nav {
   margin: auto;
 }
 .map-container:hover {
-  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.25), 0 5px 5px rgba(0, 0, 0, 0.22);
+  box-shadow: var(--shadow);
 }
 .containerOfSearch input {
   margin: 0;
@@ -127,7 +151,7 @@ input.form-control ~ a {
   transition: 0.3s;
 }
 .number-wrapper:hover {
-  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.25), 0 5px 5px rgba(0, 0, 0, 0.22);
+ box-shadow:var(--shadow);
   cursor: pointer;
 }
 .number-wrapper span.content {
@@ -136,7 +160,7 @@ input.form-control ~ a {
 }
 .number-wrapper i {
   color: var(--primary-color) !important;
-  padding: 0px !important; 
+  padding: 0px !important;
 }
 .number-wrapper i::before {
   margin: 0;
@@ -182,6 +206,7 @@ input.form-control ~ a {
   position: relative;
   display: flex;
   width: var(--round-box-width);
+  z-index: 191;
   flex-direction: column;
   left: 2%;
   right: 2%;
@@ -189,7 +214,13 @@ input.form-control ~ a {
 }
 .options-container {
   border-radius: 25px !important;
-  box-shadow: 1px 5px 5px rgba(0, 0, 0, 0.25), 0 5px 5px rgba(0, 0, 0, 0.22);
+  box-shadowr:var(--shadow);
+}
+.select-box .options-container.active{
+  margin-left: 0%;
+}
+.ml-fix{
+  margin-left: -10px!important;
 }
 .select-box .options-container {
   background: var(--white);
@@ -207,12 +238,18 @@ input.form-control ~ a {
   background: var(--white);
   border-radius: var(--border-radius);
   margin-bottom: 8px;
+  z-index: -1;
   position: relative;
   order: 0;
+  transition: all 0.4s;
+}
+.selected:hover{
+  box-shadow: var(--shadow);
+
 }
 .selected::after {
   content: "";
-  background: url("../img/001-down-arrow.svg");
+  background: url("../img/chevron.svg");
   background-size: contain;
   background-repeat: no-repeat;
   position: absolute;
@@ -222,10 +259,14 @@ input.form-control ~ a {
   top: 18px;
   transition: all 0.4s;
 }
+.mt-fix::after{
+  top: 14px;
+}
 .select-box .options-container.active {
   max-height: 240px;
   opacity: 1;
   margin-top: 60px;
+
 }
 .select-box .options-container.active + .selected::after {
   transform: rotateX(180deg);
@@ -233,8 +274,12 @@ input.form-control ~ a {
 }
 .select-box .option,
 .selected {
+  transition: .2s all ease-in-out;
   padding: var(--roundBoxPy) var(--roundBoxPx);
   cursor: pointer;
+}
+.select-box .option:hover{
+  color: var(--primary-color);
 }
 .select-box label {
   cursor: pointer;
@@ -272,7 +317,7 @@ input.form-control ~ a {
   transition: all.3s ease-in-out;
 }
 .card:hover {
-  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.25), 0 5px 5px rgba(0, 0, 0, 0.22);
+  box-shadow: var(--shadow);
   cursor: pointer;
 }
 .card-img-top {
@@ -335,23 +380,30 @@ p.card-text,
   padding: 10px var(--roundBoxPx);
   width: 100% !important;
   margin-left: -8px;
+  padding-left: 280px;
+  color: var(--primary-color);
 }
-.modalSelectbox::after{
-  top: 13px !important;
+#category-title{
+  position: absolute;
+  top: 20%;
+  left: 4%;
+  color: #495057;
 }
-.modalSelectbox:focus{
-  top:-14px !important;
+.modalSelectbox::after {
+  top: 5px !important;
+}
+.modalSelectbox:focus {
+  top: -14px !important;
 }
 
-.select-box .options-container.active{
-  margin-left: -10px !important;
+#mortarBorderRadius {
+  border-radius: var(--border-radius) !important;
 }
 #exampleCheck1 {
   /* position: absolute; */
   margin-top: 0.3rem;
   margin-left: 0px !important;
   margin-right: 15px !important;
-
   -webkit-appearance: none;
   -ms-appearance: none;
   -moz-appearance: none;
@@ -365,33 +417,34 @@ p.card-text,
   transition: 0.2s all ease-in-out;
   border-radius: 5px;
   outline: none;
+  cursor: pointer;
 }
 #exampleCheck1:checked {
   border: 2px solid var(--primary-color);
   background-color: var(--primary-color);
 }
-.feedback-textarea{
+.feedback-textarea {
   resize: none;
   border: none;
   border-radius: 15px;
 }
-#modal-footer{
+#modal-footer {
   display: flex;
   justify-content: space-between;
   margin-top: 30px;
 }
-#mortarFooterButton1,#mortarFooterButton2{
+#mortarFooterButton1,
+#mortarFooterButton2 {
   width: 40%;
   border-radius: 10px;
   padding: 10px;
   border: none;
 }
-#mortarFooterButton1{
+#mortarFooterButton1 {
   background-color: #fff;
   color: var(--primary-color);
-  font-weight: 700;
 }
-#mortarFooterButton2{
+#mortarFooterButton2 {
   background-color: var(--primary-color);
 }
 
@@ -410,5 +463,24 @@ p.card-text,
     width: 14.6rem;
     margin: auto;
     transition: all.3s ease-in-out;
+  }
+}
+
+@media (max-width: 520px) {
+  #modalSelectbox {
+    padding-left: 43vw;
+  }
+}
+
+@media (max-width: 400px) {
+  .modal-content {
+    padding: 5px !important;
+  }
+  #mortarFooterButton1,
+  #mortarFooterButton2 {
+    width: 48%;
+    border-radius: 10px;
+    padding: 10px;
+    border: none;
   }
 }
