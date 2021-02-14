@@ -64,4 +64,3 @@ function prevNum() {
   index = (index - 1 + num.length) % num.length;
   num[index].style.display = "initial";
 }
-

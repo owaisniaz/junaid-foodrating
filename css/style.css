@@ -35,11 +35,10 @@ body {
   margin: auto;
   width: 100vw;
 }
-main{
+main {
   overflow-x: hidden !important;
   margin: auto;
   width: 100%;
-
 }
 
 /* ========================================
@@ -53,7 +52,7 @@ nav {
 }
 #logo {
   font-family: algerian;
-  
+
   font-size: 1.2rem !important;
 }
 
@@ -151,7 +150,7 @@ input.form-control ~ a {
   transition: 0.3s;
 }
 .number-wrapper:hover {
- box-shadow:var(--shadow);
+  box-shadow: var(--shadow);
   cursor: pointer;
 }
 .number-wrapper span.content {
@@ -214,13 +213,13 @@ input.form-control ~ a {
 }
 .options-container {
   border-radius: 25px !important;
-  box-shadowr:var(--shadow);
+  box-shadowr: var(--shadow);
 }
-.select-box .options-container.active{
+.select-box .options-container.active {
   margin-left: 0%;
 }
-.ml-fix{
-  margin-left: -10px!important;
+.ml-fix {
+  margin-left: -10px !important;
 }
 .select-box .options-container {
   background: var(--white);
@@ -243,9 +242,8 @@ input.form-control ~ a {
   order: 0;
   transition: all 0.4s;
 }
-.selected:hover{
+.selected:hover {
   box-shadow: var(--shadow);
-
 }
 .selected::after {
   content: "";
@@ -259,14 +257,13 @@ input.form-control ~ a {
   top: 18px;
   transition: all 0.4s;
 }
-.mt-fix::after{
+.mt-fix::after {
   top: 14px;
 }
 .select-box .options-container.active {
   max-height: 240px;
   opacity: 1;
   margin-top: 60px;
-
 }
 .select-box .options-container.active + .selected::after {
   transform: rotateX(180deg);
@@ -274,11 +271,11 @@ input.form-control ~ a {
 }
 .select-box .option,
 .selected {
-  transition: .2s all ease-in-out;
+  transition: 0.2s all ease-in-out;
   padding: var(--roundBoxPy) var(--roundBoxPx);
   cursor: pointer;
 }
-.select-box .option:hover{
+.select-box .option:hover {
   color: var(--primary-color);
 }
 .select-box label {
@@ -304,7 +301,6 @@ input.form-control ~ a {
 .rankingImage {
   width: 40px;
   height: 40px;
-  background-color: brown;
   border-radius: 14px;
 }
 .cards-flex-container {
@@ -325,6 +321,24 @@ input.form-control ~ a {
   height: 220px !important;
   width: 96%;
   margin: 4px auto;
+  background-image: url("../img/1.webp");
+  background-size: cover;
+  background-position: center;
+}
+#cardsSection .pb-3:nth-child(2) .card-img-top {
+  background-image: url("../img/2.webp");
+}
+#cardsSection .pb-3:nth-child(3) .card-img-top {
+  background-image: url("../img/3.webp");
+}
+#cardsSection .pb-3:nth-child(4) .card-img-top {
+  background-image: url("../img/4.webp");
+}
+#cardsSection .pb-3:nth-child(5) .card-img-top {
+  background-image: url("../img/5.webp");
+}
+#cardsSection .pb-3:nth-child(6) .card-img-top {
+  background-image: url("../img/6.webp");
 }
 .stars {
   font-size: 10px !important;
@@ -383,7 +397,7 @@ p.card-text,
   padding-left: 280px;
   color: var(--primary-color);
 }
-#category-title{
+#category-title {
   position: absolute;
   top: 20%;
   left: 4%;
