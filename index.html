@@ -124,7 +124,7 @@
     </div>
     <main>
       <!-- =========================== Navigation bar start =========================== -->
-      <nav class="mx-2 d-flex justify-content-between mt-4">
+      <nav class="mx-4 d-flex justify-content-between mt-4">
         <div id="logo">
           <a href="#" class="navbar-brannd"> FOODRATING </a>
         </div>
@@ -140,7 +140,7 @@
       <section id="content">
         <div class="container p-0">
           <div class="row">
-            <div class="col-md-3 mt-4">
+            <div class="col-lg-3 col-md-4 mt-4 px-4">
               <section class="firs-search-section">
                 <div class="round-box-title">Restaurants</div>
 
@@ -201,7 +201,7 @@
                 </div>
               </section>
             </div>
-            <div class="col-md-9 mt-4">
+            <div class="col-lg-9 col-md-8 mt-4 pl-3">
               <div class="row no-gutters">
                 <!-- starting the inner row of column 9 -->
                 <!-- =============================  Starting is the section of search bar  ============================= -->
@@ -221,10 +221,10 @@
                 <!-- =============================  End the section of search bar  =============================== -->
 
                 <!-- =================================  Starting is the section of sort by  ==================================== -->
-                <div class="col-md-4 pl-4">
+                <div class="col-md-4 px-md-4">
                   <section class="firs-search-section p-0">
                     <div class="select-box secondSelectbox">
-                      <div class="options-container">
+                      <div class="options-container" id="forMarginLeft">
                         <div class="option">
                           <input
                             type="radio"
@@ -262,7 +262,7 @@
                           <label for="tutorials">Tutorials</label>
                         </div>
                       </div>
-                      <div class="selected">Sort By</div>
+                      <div class="selected" id="selectedForLeft">Sort By</div>
                     </div>
                   </section>
                 </div>
@@ -270,7 +270,7 @@
               </div>
               <!-- inner row-->
               <!-- ============================= The card section start ===================================-->
-              <section id="cardsSection" class="pt-3">
+              <section id="cardsSection" class="pt-4">
                 <div
                   class="d-flex cards-flex-container justify-content-between overflow-section p-0 m-0"
                 >

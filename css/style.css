@@ -13,7 +13,7 @@ a {
   --thirteenpy: 13px;
   --roundBoxPx: 24px;
   --border-radius: 15px;
-  --primary-color: #58afeb;
+  --primary-color: #00B1EC;
   --round-box-width: 100%;
   --body-color: #f5f5f5;
   --shadow: 0 3px 5px rgba(0, 0, 0, 0.25);
@@ -34,6 +34,9 @@ body {
   overflow-x: hidden !important;
   margin: auto;
   width: 100vw;
+}
+body::-webkit-scrollbar {
+  display: none;
 }
 main {
   overflow-x: hidden !important;
@@ -66,16 +69,19 @@ nav {
 
 /* === Here I am styling element in section 1 === */
 .firs-search-section {
-  padding-right: 18px;
+  padding-right: ;
 }
-
+#selectedForLeft{
+  width: 98%;
+  margin: auto;
+}
+#forMarginLeft{
+}
 .round-box-title {
   width: var(--round-box-width);
   border-radius: 15px;
   padding: var(--roundBoxPy) var(--roundBoxPx);
   position: relative;
-  left: 2%;
-  right: 2%;
   background-color: var(--white);
   transition: all 0.5s;
 }
@@ -84,8 +90,9 @@ nav {
 }
 #map {
   height: 300px;
-  width: 100%;
+  width: 99%;
   border-radius: var(--border-radius);
+  margin: auto;
 }
 .map-container {
   position: relative;
@@ -105,6 +112,7 @@ nav {
 .containerOfSearch input {
   margin: 0;
   padding: var(--thirteenpy) var(--roundBoxPx);
+  border: none;
   border-radius: var(--border-radius) !important;
   position: relative;
 }
@@ -119,7 +127,7 @@ nav {
   background-color: #e4e4e4 !important;
 }
 section.second-search-section {
-  width: 98%;
+  width: 100%;
 }
 section.second-search-section input {
   padding: var(--roundBoxPy) var(--roundBoxPx);
@@ -127,6 +135,8 @@ section.second-search-section input {
   position: relative;
   background-color: #e4e4e4;
   border: none;
+  width: 99%;
+  margin: auto;
 }
 /* this code is same as for containerOfSearch in above (*) */
 input.form-control ~ a {
@@ -144,8 +154,6 @@ input.form-control ~ a {
   border-radius: var(--border-radius);
   transition: 0.5s;
   display: flex;
-  left: 2%;
-  right: 2%;
   background-color: var(--white);
   transition: 0.3s;
 }
@@ -199,7 +207,7 @@ input.form-control ~ a {
  remember here styling are same for both 1 and 2 section ===
   */
 .secondSelectbox {
-  margin-left: -2px !important;
+  margin-left: 22px !important;
 }
 .select-box {
   position: relative;
@@ -239,6 +247,7 @@ input.form-control ~ a {
   margin-bottom: 8px;
   z-index: -1;
   position: relative;
+  right: 2%;
   order: 0;
   transition: all 0.4s;
 }
@@ -497,4 +506,19 @@ p.card-text,
     padding: 10px;
     border: none;
   }
+}
+@media(max-width:768px){
+  .secondSelectbox{
+    margin-left:-12px !important;
+    order: -1;
+  }
+
+.firs-search-section{
+  padding-right: 0px !important;
+}
+#selectedForLeft{
+  right: 0% !important;
+  left: 0% !important;
+}
+
 }
