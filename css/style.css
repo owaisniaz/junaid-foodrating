@@ -6,7 +6,9 @@
 a {
   /* text-decoration: none !important; */
 }
-
+#card-container a:hover{
+  text-decoration: none!important;
+}
 :root {
   --white: #fff;
   --roundBoxPy: 15px;
@@ -68,14 +70,10 @@ nav {
   ========================================= */
 
 /* === Here I am styling element in section 1 === */
-.firs-search-section {
-  padding-right: ;
-}
+
 #selectedForLeft {
   width: 98%;
   margin: auto;
-}
-#forMarginLeft {
 }
 .round-box-title {
   width: var(--round-box-width);
@@ -100,11 +98,9 @@ nav {
 }
 .containerOfSearch {
   position: absolute;
-  width: 90%;
-  top: 5%;
-  left: 2%;
-  right: 2%;
-  margin: auto;
+  top: 1rem;
+  left: 1rem;
+  width: calc(100% - 2rem);
 }
 .containerOfSearch:hover input {
   box-shadow: var(--shadow);
@@ -299,7 +295,7 @@ input.form-control ~ a {
         Content Section Styling end
   ========================================= */
 .overflow-section {
-  height: 70vh !important;
+  height: 70vh;
   overflow-y: scroll;
   overflow-x: hidden;
   margin: 0;
@@ -450,6 +446,7 @@ p.card-text,
   resize: none;
   border: none;
   border-radius: 15px;
+  padding: var(--roundBoxPy) var(--roundBoxPx);
 }
 #modal-footer {
   display: flex;
@@ -538,6 +535,7 @@ p.card-text,
 #page2-input-box input {
   border-radius: var(--border-radius);
   width: 100%;
+  padding: var(--roundBoxPy) var(--roundBoxPx);
 }
 #pagetwotextAreaExample {
   height: 200px !important;
@@ -563,6 +561,64 @@ p.card-text,
   background-color: var(--primary-color);
   border: none;
 }
+#PageThreeOverFlowHidden {
+  overflow-y: unset;
+  height: 100%;
+}
+#pageFourDescrption {
+  padding: 0;
+  border-radius: var(--border-radius);
+}
+#pageFourDescrption input {
+  border-radius: var(--border-radius);
+  padding: var(--roundBoxPy) var(--roundBoxPx);
+  width: 100%;
+  border: none;
+}
+input:focus {
+  outline: none;
+}
+input[type="file"] {
+  display: none;
+  width: 100%;
+}
+.custom-file-upload {
+  border-radius: var(--border-radius);
+  display: inline-block;
+  background-color: #fff;
+  cursor: pointer;
+  padding: var(--roundBoxPy) var(--roundBoxPx);
+  border: var(--shadow) !important;
+}
+.custom-file-upload {
+  width: 100%;
+}
+#ForUploadFile {
+  border: var(--shadow);
+}
+#ForUploadFile img {
+  width: 22px;
+  position: absolute;
+  right: 7%;
+}
+#ForUploadFile input {
+  width: 100% !important;
+  position: relative;
+}
+#PageFourEndButton {
+  width: 100%;
+  background-color: var(--primary-color);
+  border-radius: var(--border-radius);
+  border: none;
+  padding: var(--roundBoxPy) var(--roundBoxPx);
+  letter-spacing: 5px;
+}
+.PageFourMap {
+  height: 400px !important;
+}
+.boxshadow:hover{
+  box-shadow: var(--shadow) !important;
+}
 
 /* Modal styling end */
 @media (max-width: 1168px) {
@@ -573,14 +629,12 @@ p.card-text,
     margin-right: auto;
     margin-left: auto;
   }
-
   .card {
     border-radius: 25px;
     margin: auto;
     transition: all.3s ease-in-out;
   }
 }
-
 @media (max-width: 520px) {
   #modalSelectbox {
     padding-left: 43vw;
@@ -592,6 +646,8 @@ p.card-text,
     order: -1;
     width: 100% !important;
   }
+}
+
 @media (max-width: 400px) {
   .modal-content {
     padding: 5px !important;
@@ -607,8 +663,7 @@ p.card-text,
     height: 200px !important;
   }
 }
-
-
+@media (max-width: 450px) {
   .firs-search-section {
     padding-right: 0px !important;
   }
@@ -681,9 +736,5 @@ p.card-text,
 @media (max-width: 445px) {
   .card-img-top {
     height: 280px !important;
-  }
-}
-@media (max-width: 1143px) {
-  #pagetwo-card-container {
   }
 }

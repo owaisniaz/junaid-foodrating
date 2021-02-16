@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- ======== bootstrap.css ======== -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <!-- ======= Font Awesome ========= -->
+    <link rel="stylesheet" href="css/all.min.css" />
+    <!-- ========== style.css =========== -->
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="font/flaticon.css" />
+    <title>Page#4</title>
+  </head>
+
+  <body>
+    <!-- Feedback Modal -->
+    <div class="modal fade" id="exampleModal">
+      <div class="modal-dialog modal-dialog modal-dialog-centered">
+        <div class="modal-content p-4" id="mortarBorderRadius">
+          <div class="modal-body">
+            <form>
+              <div class="form-group roundStyle">
+                <input
+                  type="text"
+                  placeholder="Branch Name"
+                  class="form-control"
+                  id="branchname"
+                  aria-describedby="branch-name"
+                />
+              </div>
+              <div class="form-group roundStyle">
+                <input
+                  type="email"
+                  placeholder="Email"
+                  class="form-control"
+                  id="email"
+                  aria-describedby="email"
+                />
+              </div>
+              <div class="select-box modalSelectbox m-0">
+                <div class="options-container ml-fix">
+                  <div class="option">
+                    <input
+                      type="radio"
+                      class="radio"
+                      id="automobiles"
+                      name="category"
+                    />
+                    <label for="automobiles">Automobiles</label>
+                  </div>
+                  <div class="option">
+                    <input
+                      type="radio"
+                      class="radio"
+                      id="music"
+                      name="category"
+                    />
+                    <label for="music">Music</label>
+                  </div>
+                  <div class="option">
+                    <input
+                      type="radio"
+                      class="radio"
+                      id="tutorials"
+                      name="category"
+                    />
+                    <label for="tutorials">Tutorials</label>
+                  </div>
+                </div>
+
+                <div class="selected mt-fix" id="modalSelectbox">Like</div>
+                <span id="category-title">Category</span>
+              </div>
+
+              <div class="form-group mt-2">
+                <textarea
+                  class="form-control feedback-textarea"
+                  id="textAreaExample"
+                  rows="4"
+                  placeholder="Description"
+                ></textarea>
+              </div>
+              <div class="form-group mt-2">
+                <input
+                  type="checkbox"
+                  class="form-check-input"
+                  id="exampleCheck1"
+                />
+
+                <label
+                  class="form-check-label ml-4 mt-1 pl-2"
+                  for="exampleCheck1"
+                  >Click to automatically attach screenshot of this page</label
+                >
+              </div>
+              <div id="modal-footer">
+                <button
+                  type="button"
+                  class="btn btn-secondary"
+                  data-dismiss="modal"
+                  id="mortarFooterButton1"
+                >
+                  CANCEL
+                </button>
+                <button
+                  type="button"
+                  class="btn btn-primary"
+                  id="mortarFooterButton2"
+                >
+                  POST REVIEW
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <main>
+      <!-- =========================== Navigation bar start =========================== -->
+      <nav class="mx-4 d-flex justify-content-between mt-4">
+        <div id="logo">
+          <a href="#" class="navbar-brannd"> FOODRATING </a>
+        </div>
+
+        <div id="login">
+          <a href="login.html"> LOGIN </a>
+        </div>
+      </nav>
+      <!-- =========================== Navigation bar end=========================== -->
+
+      <!-- ===================== Here all content styling start ======================= -->
+
+      <section id="PageThreeDetails">
+        <div class="container">
+          <div class="row justify-content-between">
+            <div class="col-lg-6 col-md-6">
+              <div id="FirstPhaseOfDetail">
+                <form>
+                  <div class="select-box mt-4">
+                    <div class="options-container">
+                      <div class="option">
+                        <input
+                          type="radio"
+                          class="radio"
+                          id="automobiles"
+                          name="category"
+                        />
+                        <label for="automobiles">Automobiles</label>
+                      </div>
+
+                      <div class="option">
+                        <input
+                          type="radio"
+                          class="radio"
+                          id="film"
+                          name="category"
+                        />
+                        <label for="film">Film & Animation</label>
+                      </div>
+                      <div class="option">
+                        <input
+                          type="radio"
+                          class="radio"
+                          id="tutorials"
+                          name="category"
+                        />
+                        <label for="tutorials">Tutorials</label>
+                      </div>
+                    </div>
+                    <div class="selected">Select a cuisine</div>
+                  </div>
+                  <div class="form-group mt-2">
+                    <input
+                      type="checkbox"
+                      class="form-check-input"
+                      id="exampleCheck1"
+                    />
+
+                    <label
+                      class="form-check-label ml-4 mt-1 pl-2"
+                      for="exampleCheck1"
+                      >Click to automatically attach screenshot of this
+                      page</label
+                    >
+                  </div>
+                  <div class="round-box-title" id="pageFourDescrption">
+                    <input id="" type="text" placeholder="Branch Name" />
+                  </div>
+                  <div class="round-box-title mt-3" id="pageFourDescrption">
+                    <input id="" type="text" placeholder="Dish Name" />
+                  </div>
+                  <div
+                    class="number-wrapper d-flex mr-3 align-items-center mt-3"
+                  >
+                    <span class="content">Price</span>
+                    <div id="box" class="pr-5 py-0"></div>
+                    <i
+                      class="flaticon-up-arrow-angle next"
+                      onclick="nextNum()"
+                    ></i>
+                    <i class="flaticon-down-arrow prev" onclick="prevNum()"></i>
+                  </div>
+                  <div id="ForUploadFile" class="mt-3 ">
+                    <label for="file-upload" class="custom-file-upload boxshadow">
+                      <img src="img/upload.svg" alt="" /> Upload Image
+                    </label>
+                    <input id="file-upload" class="boxshadow" type="file"  />
+                  </div>
+
+                  <div class="form-group mt-2 add-product-shadow-textarea ">
+                    <textarea
+                      class="form-control feedback-textarea boxshadow "
+                      id="textAreaExample"
+                      rows="4"
+                      placeholder="Description"
+                    ></textarea>
+                  </div>
+
+                  <div class="lastButton mt-5 pt-3 mb-2">
+                    <button
+                      type="button"
+                      class="btn btn-secondary"
+                      data-dismiss="modal"
+                      id="PageFourEndButton"
+                    >
+                      SUBMIT
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+              <map name="">
+                <div class="map-container mt-4">
+                  <div id="map" class="PageFourMap"></div>
+                  <div class="input-group containerOfSearch">
+                    <input
+                      class="form-control round-border"
+                      type="text"
+                      placeholder="Search Location"
+                    />
+                    <a href="#"> <i class="fas fa-search"></i> </a>
+                  </div>
+                </div>
+              </map>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Button trigger modal -->
+      <button
+        type="button"
+        class="btn btn-primary"
+        data-toggle="modal"
+        data-target="#exampleModal"
+        id="modal-button"
+      >
+        Feedback
+      </button>
+    </main>
+
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      function initMap() {
+        var location = { lat: -25.363, lng: 131.044 };
+        var map = new google.maps.Map(document.getElementById("map"), {
+          zoom: 4,
+          center: location,
+          disableDefaultUI: true,
+          zoomControl: false,
+          scaleControl: true,
+        });
+        var marker = new google.maps.Marker({
+          position: location,
+          map: map,
+        });
+      }
+    </script>
+    <script
+      async
+      defer
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCrhNhEW-NO_eX6QPFPeEaig04EujRzTDM&callback=initMap"
+      type="text/javascript"
+    ></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
