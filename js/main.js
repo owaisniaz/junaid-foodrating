@@ -47,7 +47,7 @@ selectedAll.forEach((selected) => {
 });
 
 var numbers = document.getElementById("box");
-for (var a = 0; a < 6; a++) {
+for (var a = 0; a<6; a++) {
   var span = document.createElement("span");
   span.textContent = a;
   numbers.appendChild(span);
