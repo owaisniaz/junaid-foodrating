@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
+    <meta charset="UTF-8" /><meta name="description" content="Free Web tutorials">
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- ======== bootstrap.css ======== -->
@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="css/all.min.css" />
     <!-- ========== style.css =========== -->
     <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="font/flaticon.css" />
+     
     <title>Document</title>
   </head>
 
@@ -50,28 +50,28 @@
                     <input
                       type="radio"
                       class="radio"
-                      id="automobiles"
+                      id="automobiles2"
                       name="category"
                     />
-                    <label for="automobiles">Automobiles</label>
+                    <label for="automobiles2">Automobiles2</label>
                   </div>
                   <div class="option">
                     <input
                       type="radio"
                       class="radio"
-                      id="music"
+                      id="music2"
                       name="category"
                     />
-                    <label for="music">Music</label>
+                    <label for="music2">Music</label>
                   </div>
                   <div class="option">
                     <input
                       type="radio"
                       class="radio"
-                      id="tutorials"
+                      id="tutorials4"
                       name="category"
                     />
-                    <label for="tutorials">Tutorials</label>
+                    <label for="tutorials4">Tutorials4</label>
                   </div>
                 </div>
 
@@ -150,29 +150,29 @@
                       <input
                         type="radio"
                         class="radio"
-                        id="automobiles"
+                        id="automobiles3"
                         name="category"
                       />
-                      <label for="automobiles">Automobiles</label>
+                      <label for="automobiles3">Automobiles3</label>
                     </div>
 
                     <div class="option">
                       <input
                         type="radio"
                         class="radio"
-                        id="film"
+                        id="film2"
                         name="category"
                       />
-                      <label for="film">Film & Animation</label>
+                      <label for="film2">Film & Animation</label>
                     </div>
                     <div class="option">
                       <input
                         type="radio"
                         class="radio"
-                        id="tutorials"
+                        id="tutorials2"
                         name="category"
                       />
-                      <label for="tutorials">Tutorials</label>
+                      <label for="tutorials2">Tutorials2</label>
                     </div>
                   </div>
                   <div class="selected">Select a cuisine</div>
@@ -181,22 +181,26 @@
                 <div class="number-wrapper d-flex mr-3 align-items-center mt-3">
                   <span class="content">Distance in km</span>
                   <div id="box" class="pr-5 py-0"></div>
-                  <i
-                    class="flaticon-up-arrow-angle next"
+                  <img
+                    src="img/chevron-up.svg"
+                    class="next"
+                    alt="next"
                     onclick="nextNum()"
-                  ></i>
-                  <i class="flaticon-down-arrow prev" onclick="prevNum()"></i>
+                  />
+                  <img src="img/chevron - blue.svg" alt="prev" class="prev" onclick="prevNum()"></img>
                 </div>
 
                 <div class="map-container mt-4">
                   <div id="map"></div>
                   <div class="input-group containerOfSearch">
+                    <label class="sr-only" for="search-loc">Search Location</label>
                     <input
                       class="form-control round-border"
                       type="text"
+                      id="search-loc"
                       placeholder="Search Location"
                     />
-                    <a href="#"> <i class="fas fa-search"></i> </a>
+                    <a href="#" class="search-btn-map"> <i class="fas fa-search"></i> </a>
                   </div>
                 </div>
               </section>
@@ -208,12 +212,14 @@
                 <div class="col-lg-8">
                   <section class="second-search-section">
                     <div class="input-group parentOfSearch boxshadow">
+                      <label for="search-food" class="sr-only">Search Food</label>
                       <input
                         class="form-control round-border"
                         type="text"
                         placeholder="Search Food"
+                        id="search-food"
                       />
-                      <a href="#"> <i class="fas fa-search"></i> </a>
+                      <a href="#" class="search-btn"> <i class="fas fa-search"></i> </a>
                     </div>
                   </section>
                 </div>
@@ -275,7 +281,7 @@
                   class="d-flex cards-flex-container justify-content-between overflow-section p-0 m-0"
                 >
                   <div class="pb-3" id="card-container">
-                    <a href="product.html">
+                    <a href="product.html" class="product-page-a">
                       <div class="card p-2">
                         <div class="card-img-top"></div>
                         <div class="card-body p-1">
@@ -306,8 +312,7 @@
                           </div>
                           <a
                             href="#"
-                            class="btn btn-primary mt-4"
-                            id="primary-button"
+                            class="btn btn-primary mt-4 primary-button"
                             >Rate Now</a
                           >
                         </div>
@@ -343,8 +348,7 @@
                         </div>
                         <a
                           href="#"
-                          class="btn btn-primary mt-4"
-                          id="primary-button"
+                          class="btn btn-primary mt-4 primary-button"
                           >Rate Now</a
                         >
                       </div>
@@ -379,8 +383,7 @@
                         </div>
                         <a
                           href="#"
-                          class="btn btn-primary mt-4"
-                          id="primary-button"
+                          class="btn btn-primary mt-4 primary-button"
                           >Rate Now</a
                         >
                       </div>
@@ -415,8 +418,8 @@
                         </div>
                         <a
                           href="#"
-                          class="btn btn-primary mt-4"
-                          id="primary-button"
+                          class="btn btn-primary mt-4 primary-button"
+
                           >Rate Now</a
                         >
                       </div>
@@ -451,8 +454,7 @@
                         </div>
                         <a
                           href="#"
-                          class="btn btn-primary mt-4"
-                          id="primary-button"
+                          class="btn btn-primary mt-4 primary-button"
                           >Rate Now</a
                         >
                       </div>
@@ -487,8 +489,7 @@
                         </div>
                         <a
                           href="#"
-                          class="btn btn-primary mt-4"
-                          id="primary-button"
+                          class="btn btn-primary mt-4 primary-button"
                           >Rate Now</a
                         >
                       </div>

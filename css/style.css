@@ -37,9 +37,6 @@ body {
   margin: auto;
   width: 100vw;
 }
-body::-webkit-scrollbar {
-  display: none;
-}
 main {
   overflow-x: hidden !important;
   margin: auto;
@@ -187,15 +184,18 @@ input.form-control ~ a {
 #box span:nth-child(1) {
   display: initial;
 }
-.number-wrapper i.next {
+.number-wrapper img.next {
   position: absolute;
-  top: 10%;
+  top: 18%;
   right: 5%;
   margin: 0;
 }
-.number-wrapper i.prev {
+.prev,.next{
+  width: 1rem;
+}
+.number-wrapper img.prev {
   position: absolute;
-  bottom: 10%;
+  bottom: 18%;
   right: 5%;
   margin: 0;
 }
@@ -348,7 +348,7 @@ input.form-control ~ a {
 .stars {
   font-size: 10px !important;
 }
-#primary-button {
+.primary-button {
   width: 100%;
   display: flex;
   justify-content: center;
@@ -499,6 +499,7 @@ p.card-text,
   width: 45%;
   height: 100% !important;
   min-width: 21.7rem !important;
+  min-height: 600px;
 }
 #pagetwo-phaseone-stars i {
   font-size: 20px;
@@ -522,14 +523,10 @@ p.card-text,
   padding: 0px;
   font-size: 50px;
 }
-#pagetwocard {
-  height: 600px !important;
-}
-
 .card {
   border-radius: 25px;
   min-width: 15rem;
-
+  height: 100%;
   transition: all.3s ease-in-out;
 }
 #page2-input-box input {
@@ -610,7 +607,7 @@ input[type="file"] {
   background-color: var(--primary-color);
   border-radius: var(--border-radius);
   border: none;
-  padding: var(--roundBoxPy) var(--roundBoxPx);
+
   letter-spacing: 5px;
 }
 .PageFourMap {

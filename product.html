@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
+    <meta charset="UTF-8" /><meta name="description" content="Free Web tutorials">
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Page#2</title>
@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="css/all.min.css" />
     <!-- ========== style.css =========== -->
     <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="font/flaticon.css" />
+     
   </head>
   <body>
     <!-- Feedback Modal -->
@@ -25,20 +25,22 @@
           <div class="modal-body">
             <form>
               <div class="form-group roundStyle">
+                <label for="branchnameProductPg" class="sr-only"></label>
                 <input
                   type="text"
                   placeholder="Branch Name"
                   class="form-control"
-                  id="branchname"
+                  id="branchnameProductPg"
                   aria-describedby="branch-name"
                 />
               </div>
               <div class="form-group roundStyle">
+                <label for="emailProductPg" class="sr-only"></label>
                 <input
                   type="email"
                   placeholder="Email"
                   class="form-control"
-                  id="email"
+                  id="emailProductPg"
                   aria-describedby="email"
                 />
               </div>
@@ -48,28 +50,28 @@
                     <input
                       type="radio"
                       class="radio"
-                      id="automobiles"
+                      id="automobiles1ProductPg"
                       name="category"
                     />
-                    <label for="automobiles">Automobiles</label>
+                    <label for="automobiles1ProductPg">Automobiles</label>
                   </div>
                   <div class="option">
                     <input
                       type="radio"
                       class="radio"
-                      id="music"
+                      id="music1ProductPg"
                       name="category"
                     />
-                    <label for="music">Music</label>
+                    <label for="music1ProductPg">Music</label>
                   </div>
                   <div class="option">
                     <input
                       type="radio"
                       class="radio"
-                      id="tutorials"
+                      id="tutorials1ProductPg"
                       name="category"
                     />
-                    <label for="tutorials">Tutorials</label>
+                    <label for="tutorials1ProductPg">Tutorials</label>
                   </div>
                 </div>
 
@@ -124,11 +126,11 @@
       <!-- =========================== Navigation bar start =========================== -->
       <nav class="mx-4 d-flex justify-content-between mt-4">
         <div id="logo">
-          <a href="#" class="navbar-brannd"> FOODRATING </a>
+          <a href="#" class="navbar-brannd" title="Brand Name"> FOODRATING </a>
         </div>
 
         <div id="login">
-          <a href="login.html"> LOGIN </a>
+          <a href="login.html" title="Login"> LOGIN </a>
         </div>
       </nav>
       <!-- =========================== Navigation bar end=========================== -->
@@ -179,23 +181,29 @@
                 <div class="number-wrapper d-flex mr-3 align-items-center mt-3">
                   <span class="content">Distance in km</span>
                   <div id="box" class="pr-5 py-0"></div>
-                  <i
-                    class="flaticon-up-arrow-angle next"
+                  <img
+                    src="img/chevron-up.svg"
+                    class="next"
+                    alt="next arrow"
                     onclick="nextNum()"
-                  ></i>
-                  <i class="flaticon-down-arrow prev" onclick="prevNum()"></i>
+                  />
+                  <img src="img/chevron - blue.svg" class="prev" alt="previous arrow" onclick="prevNum()"/>
                 </div>
 
                 <div class="map-container mt-4">
+                  <map name="">
                   <div id="map"></div>
                   <div class="input-group containerOfSearch">
+                    <label for="SearchLocationProduct" class="sr-only"></label>
                     <input
                       class="form-control round-border"
                       type="text"
                       placeholder="Search Location"
+                      id="SearchLocationProduct"
                     />
-                    <a href="#"> <i class="fas fa-search"></i> </a>
+                    <a href="#" class="search-btn" title="Seach Location"> <i class="fas fa-search"></i> </a>
                   </div>
+                </map>
                 </div>
               </section>
             </div>
@@ -206,12 +214,14 @@
                 <div class="col-lg-8">
                   <section class="second-search-section">
                     <div class="input-group parentOfSearch">
+                      <label for="SearchFood" class="sr-only"></label>
                       <input
                         class="form-control round-border"
                         type="text"
                         placeholder="Search Food"
+                        id="SearchFood"
                       />
-                      <a href="#"> <i class="fas fa-search"></i> </a>
+                      <a href="#" class="search-btn" title="Search Food"> <i class="fas fa-search"></i> </a>
                     </div>
                   </section>
                 </div>
@@ -227,37 +237,37 @@
                           <input
                             type="radio"
                             class="radio"
-                            id="automobiles"
+                            id="automobilesProductPg"
                             name="category"
                           />
-                          <label for="automobiles">Automobiles</label>
+                          <label for="automobilesProductPg">Automobiles</label>
                         </div>
                         <div class="option">
                           <input
                             type="radio"
                             class="radio"
-                            id="film"
+                            id="filmProductPg"
                             name="category"
                           />
-                          <label for="film">Film & Animation</label>
+                          <label for="filmProductPg">Film & Animation</label>
                         </div>
                         <div class="option">
                           <input
                             type="radio"
                             class="radio"
-                            id="music"
+                            id="musicProductPg"
                             name="category"
                           />
-                          <label for="music">Music</label>
+                          <label for="musicProductPg">Music</label>
                         </div>
                         <div class="option">
                           <input
                             type="radio"
                             class="radio"
-                            id="tutorials"
+                            id="tutorialsProductPg"
                             name="category"
                           />
-                          <label for="tutorials">Tutorials</label>
+                          <label for="tutorialsProductPg">Tutorials</label>
                         </div>
                       </div>
                       <div class="selected" id="selectedForLeft">Sort By</div>
@@ -306,7 +316,7 @@
                       <small id="smallDescription"
                         >You have not rated this food yet</small
                       >
-                      <div class="rankingContent d-flex pt-4 mb-1">
+                      <div class="rankingContent d-flex pt-5 mb-1">
                         <img
                           src="img/mc.webp"
                           class="img-fluid rankingImage"
@@ -338,14 +348,17 @@
                           <i class="fas fa-star greystar"></i>
                         </div>
                         <div id="page2-input-box" class="pt-5">
+                          <label for="ForNameProduct" class="sr-only"></label>
                           <input
                             type="text"
                             class=""
                             placeholder="Enter Your Name"
+                            id="ForNameProduct"
                           />
                         </div>
 
-                        <div class="form-group mt-2 pt-4 pb-5">
+                        <div class="form-group mt-2 pt-3 pb-5">
+                          <label for="pagetwotextAreaExample" class="sr-only"></label>
                           <textarea
                             class="form-control feedback-textarea"
                             id="pagetwotextAreaExample"
@@ -354,12 +367,13 @@
                           ></textarea>
                         </div>
 
-                        <div id="button" class="pt-1 pb-4">
+                        <div id="button" class="pt pb-4">
                           <a
                             href="#"
-                            class="btn btn-primary"
+                            class="btn btn-primary primary-button"
                             id="primary-button"
                             >Rate Now</a
+                            title="Rate Now"
                           >
                         </div>
                       </div>
